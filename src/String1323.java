@@ -1,4 +1,3 @@
-package String;
 /*
 1323. Maximum 69 Number
 
@@ -36,3 +35,24 @@ Constraints:
 num's digits are 6 or 9.
 */
 
+
+class Solution1323 {
+    public int maximum69Number (int num) {
+        int add =0;
+        int temp =num;
+        int digit =1;
+        int d =0;
+
+
+        while(temp >0){
+            d = temp%10;
+            temp /= 10;
+            if(d == 6){
+                add = 3*digit;
+            }
+            digit *= 10;
+
+        }
+        return num+add;
+    }
+}

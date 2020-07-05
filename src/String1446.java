@@ -1,5 +1,3 @@
-package String;
-
 /*
 *1446. Consecutive Characters
 Given a string s, the power of the string is the maximum length of a non-empty substring that contains only one unique character.

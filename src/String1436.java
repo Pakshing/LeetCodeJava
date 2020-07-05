@@ -1,5 +1,3 @@
-package String;
-
 import java.util.*;
 /*
 *1436. Destination City
