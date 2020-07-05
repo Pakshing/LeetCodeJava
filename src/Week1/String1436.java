@@ -1,3 +1,5 @@
+package Week1;
+
 import java.util.*;
 /*
 *1436. Destination City
