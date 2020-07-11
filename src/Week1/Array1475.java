@@ -51,7 +51,7 @@ class Solution1475a {
     }
 }
 
-class Solution1475b {
+class Solution1475b { //better one
     public int[] finalPrices(int[] A) {
         Stack<Integer> stack = new Stack<>();
         for (int i = 0; i < A.length; i++) {
