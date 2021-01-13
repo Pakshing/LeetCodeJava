@@ -45,7 +45,7 @@ Accepted
 Submissions
 7,628,519
 * */
-import java.util.HashMap;
+import java.util.*;
 public class Two_Sum {
     class Solution {
         public int[] twoSum(int[] nums, int target) {
@@ -64,4 +64,27 @@ public class Two_Sum {
             return res;
         }
     }
+
+    class Solution2 {
+        public int[] twoSum(int[] array, int targetSum) {
+            //O(nlogn) & O(1)
+            Arrays.sort(array);
+            int left=0;
+            int right = array.length-1;
+
+            while(left<right){
+                int currentSum = array[left]+array[right];
+                if(currentSum == targetSum){
+                    return new int[] {array[left],array[right]};
+                }else if (currentSum < targetSum){
+                    left++;
+                }else{
+                    right--;
+                }
+
+            }
+            return new int[0];
+        }
+    }
 }
+
