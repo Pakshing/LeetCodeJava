@@ -16,7 +16,9 @@ public class GroupAnagrams {
             if(anagrams.containsKey(sortedWord)){
                 anagrams.get(sortedWord).add(word);
             }else{
-                anagrams.put(sortedWord,new ArrayList<String>( Arrays.asList(word)  ));
+                ArrayList<String> newList = new ArrayList<>();
+                newList.add(word);
+                anagrams.put(sortedWord,newList);
             }
         }
 
