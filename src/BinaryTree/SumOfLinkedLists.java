@@ -14,6 +14,35 @@ public class SumOfLinkedLists {
         }
     }
 
+    public LinkedList sumOfLinkedLists1(LinkedList linkedListOne, LinkedList linkedListTwo) {
+        // Write your code here.
+        //Time O(max(n,m)) || Space O(max(n,m)) where n is the # of node in listOne and m is # of node in listTwo
+        LinkedList headOne = linkedListOne;
+        LinkedList headTwo = linkedListTwo;
+        LinkedList dummy = new LinkedList(0);
+        LinkedList cur = dummy;
+        int carry = 0;
+        int digit = 0;
+        int sum = 0;
+
+
+        while(headOne != null || headTwo != null || carry != 0){
+
+            int valueOne =  (headOne != null)? headOne.value: 0;
+            int valueTwo =  (headTwo != null)? headTwo.value: 0;
+            sum = valueOne + valueTwo;
+            digit = sum%10 + carry;
+            carry = sum/10;
+            cur.next = new LinkedList(digit);
+            cur = cur.next;
+
+            headOne = (headOne != null) ? headOne = headOne.next : null;
+            headTwo = (headTwo != null) ? headTwo = headTwo.next : null;
+        }
+
+        return dummy.next;
+    }
+
     public LinkedList sumOfLinkedLists(LinkedList linkedListOne, LinkedList linkedListTwo) {
         // Write your code here.
         LinkedList headOne = reverseLinkedList(linkedListOne);
